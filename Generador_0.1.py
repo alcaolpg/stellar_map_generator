@@ -18,12 +18,7 @@ from multiprocessing import Process, Manager
 #   Sistema(___Posición_relativa_MV[x,y,z]___, nombre,descripción, faccion_actual?) <--- PRINCIPAL
 #   Cuerpo(___Posición_relativa_MV[x,y,z](Fk)___,___Posición_relativa_estrella[x,y,z]___, Nombre, Tipo(planeta, estación, Otro), Satelites?,Caracteristicas)
 
-# map = {'Posicion relativa a MV': ['0','0','0'],
-#       'Nombre': ['Main Beacon'],
-#      'Descripcion': ['Punto de referencia para las naves de todas las facciones'],
-#     'Faccion actual': ['Neutral']}
-
-#factions = ["Traal'daar", "Protectorado Astral", "Confederación Unida de Gustair", "Elysia", "Conglomerado"]
+# factions = ["Traal'daar", "Protectorado Astral", "Confederación Unida de Gustair", "Elysia", "Conglomerado"]
 # Velocidad de viaje recomendado aprox 0.31 parsec/h o 1 l y/h
 
 
