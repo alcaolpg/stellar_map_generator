@@ -147,12 +147,15 @@ def create_random_system(current_system, separation_factor):
     return system_true_possition
 
 
-def create_cluster(size, separation_factor):
-
+def create_cluster(seeds, chances, size, separation_factor):
     print("creating cluster...")
-    chances = 1
-    system_candidates = [[0, chances], [1, chances]]
-    systems = [[0, 0, 0], [4.2, 7.1, 10.47]]
+    system_candidates = []
+    origin = [0, 0, 0]
+    systems = []
+
+    for seed in range(0, seeds):
+        system_candidates.append([seed, chances])
+        systems.append(create_random_system(origin, separation_factor))
 
     for i in range(size - 2):
         selected_system_index = system_candidates[
@@ -202,8 +205,8 @@ def set_map_bounds(x, y, z):
 map_bounds = set_map_bounds(34710.0, 21048.0, 13465.0)
 systems = []
 separation_factor = 2  # de esquina a esquina, 85530.49 * separation_factor
-size = 10
-systems = create_cluster(size, separation_factor)
+size = 500
+systems = create_cluster(5, 1, size, separation_factor)
 systems = refinate_cluster(690.420, 3.0, systems, len(systems))
 # systems =  refinate_cluster(690.420,3.0,systems, len(systems))
 # systems =  refinate_cluster(690.420,3.0,systems, len(systems))
