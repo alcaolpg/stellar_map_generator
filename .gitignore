@@ -1,0 +1,6 @@
+.vscode
+Pipfile.lock
+Pipfile
+mapa.txt
+distancias.txt
+distancias.json
